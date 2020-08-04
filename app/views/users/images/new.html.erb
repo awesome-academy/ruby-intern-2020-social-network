@@ -1,0 +1,6 @@
+<%= form_for [:users, current_user] do |f| %>
+  <%= f.label :images %>
+  <%= f.file_field :images, multiple: true, direct_upload: true %>
+
+  <%= f.submit t("add_image") %>
+<% end %>

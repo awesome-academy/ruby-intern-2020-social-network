@@ -5,9 +5,9 @@
       <%= f.hidden_field :name %>
       <% @topics.each_with_index do |topic, index| %>
         <% if topic.users.find_by(id: current_user.id).present? %>
-          <%= render "topics_picking", f: f, topic: topic, index: index %>
-        <% else %>
           <%= render "topics_picked", f: f, topic: topic, index: index %>
+        <% else %>
+          <%= render "topics_picking", f: f, topic: topic, index: index %>
         <% end %>
       <% end %>
       <%= f.submit t("save") %>

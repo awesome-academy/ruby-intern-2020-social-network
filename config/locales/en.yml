@@ -20,6 +20,11 @@ en:
         password: "Password"
         password_confirmation: "Password Confirmation"
         sign_up: "Sign Up"
+      show:
+        time_line: "Time Line"
+        introduction: "Introduction"
+        friend: "Friends"
+        image: "Image"
     sessions:
       new:
         sign_in: "Sign In"
@@ -36,3 +41,11 @@ en:
         password: "Password"
         password_confirmation: "Password confirmation"
         update_password: "Update password"
+    intro_users:
+      form_info:
+        man: "Man"
+        woman: "Woman"
+        single: "Single"
+        relationship: "Relationship"
+        get_married: "Get Married"
+  save: "Save"

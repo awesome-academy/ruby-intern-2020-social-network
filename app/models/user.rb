@@ -36,6 +36,10 @@ class User < ApplicationRecord
 
   accepts_nested_attributes_for :topic_items, allow_destroy: true
 
+  has_one_attached :image_background
+  has_one_attached :avatar
+  has_many_attached :images
+
   validates :name, presence: true, length: {maximum: Settings.user.name_length}
   validates :email, presence: true,
                     length: {maximum: Settings.user.email_length},

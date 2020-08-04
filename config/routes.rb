@@ -7,7 +7,10 @@ Rails.application.routes.draw do
     post "/signin", to: "users/sessions#create"
     namespace :users do
       resources :password_resets, except: %i(index show destroy)
-      resources :users
+      resources :users do
+        resources :images, only: %i(index new)
+      end
+      resources :intro_users
     end
     resources :topics
   end

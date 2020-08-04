@@ -1,4 +1,4 @@
-import "color.scss"
+@import 'color';
 
 .sc-sign_in_up {
   height: auto;
@@ -41,7 +41,7 @@ import "color.scss"
 }
 
 .greeting {
-  color: rgb(26, 26, 26);
+  color: $span;
   font-weight: bold;
   font-size: 34px;
   line-height: 41px;
