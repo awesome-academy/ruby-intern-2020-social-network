@@ -1,0 +1,74 @@
+<header class="gapo-header">
+  <div class="d-flex align-items-center">
+    <%= link_to("#", class: "header_brand") do %>
+      <% image_tag "logo", class: "header_logo" %>
+    <% end %>
+    <div class="bulkhead"></div>
+    <div class="header_search-box" id="js-search-box">
+      <form class="header_search-form">
+        <div class="search-box_icon d-flex align-items-center align-items-center font-size-large">
+          <i class="fa fa-search"></i>
+        </div>
+        <div class="search-input dropdown">
+          <input class="search-box__input form-control border-0 font-size-normal shadow-none" 
+                 placeholder="Search">
+        </div>
+      </form>
+    </div>
+    <ul class="header__nav header__nav--main d-flex align-items-center list-unstyled ml-auto hide_mobile">
+      <li>
+        <%= link_to("#", class: "active") do %>
+          <div>
+            <%= image_tag("icons/homepage.svg") %>
+            <%= t ".homepage" %>
+          </div>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to("#", class: "active") do %>
+          <div>
+            <%= image_tag("icons/news-default.svg") %>
+            <%= t ".news" %>
+          </div>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to("#", class: "active") do %>
+          <div>
+            <%= image_tag("icons/group-default.svg") %>
+            <%= t ".group" %>
+          </div>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to("#", class: "active") do %>
+          <div>
+            <%= image_tag("icons/video-default.svg") %>
+            <%= t ".video" %>
+          </div>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to("#", class: "active") do %>
+          <div>
+            <%= image_tag("icons/chat-default.svg") %>
+            <%= t ".chat" %>
+          </div>
+        <% end %>
+      </li>
+    </ul>
+    <ul class="header__nav header__nav--right d-flex align-items-center list-unstyled ml-auto">
+      <li>
+        <%= link_to("#", class: "hide_mobile") do %>
+          <%= image_tag("icons/request-friend.svg", class: "header__logo--requestfriend") %>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to("#", class: "hide_mobile") do %>
+          <%= image_tag("icons/notifications.svg", class: "header__logo--notifications") %>
+        <% end %>
+      </li>
+      <%= render "btn_user" %>
+    </ul>
+  </div>
+</header>

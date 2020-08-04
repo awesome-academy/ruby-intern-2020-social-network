@@ -2,3 +2,9 @@ en:
   layouts:
     application:
       title: "SNS"
+    header:
+      homepage: "Home Page"
+      news: "News"
+      group: "Group"
+      video: "Video"
+      chat: "Chat"
