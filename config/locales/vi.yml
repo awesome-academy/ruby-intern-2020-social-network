@@ -8,3 +8,8 @@ vi:
       group: "Nhom"
       video: "Video"
       chat: "Nhan tin"
+  user:
+    controller:
+      create:
+        signup_suscess: "Dang ky thanh cong, chao mung ban den voi SNS, iu ban nhiu` <3."
+        signup_fail: "Dang ky that bai, check lai thong tin di ban @@"

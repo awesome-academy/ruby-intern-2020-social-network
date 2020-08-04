@@ -8,3 +8,31 @@ en:
       group: "Group"
       video: "Video"
       chat: "Chat"
+  users:
+    users:
+      create:
+        signup_suscess: "Sign up suscessfully. Welcome my SNS. Love you <3."
+        signup_fail: "Sign up fail, check information @@"
+      new:
+        greeting: "Hello gapoer, welcome to my SNS."
+        name: "Name"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+        sign_up: "Sign Up"
+    sessions:
+      new:
+        sign_in: "Sign In"
+        remember_me: "Remember me"
+      create:
+        login_fail: "Sign in not suscess, please check email or password"
+    password_resets:
+      new:
+        forgot_password: "Forgot password"
+        submit: "Next"
+        email: "Email"
+      edit:
+        reset_password: "Reset password"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+        update_password: "Update password"

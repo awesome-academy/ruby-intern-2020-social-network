@@ -1,0 +1,80 @@
+import "color.scss"
+
+.sc-sign_in_up {
+  height: auto;
+  width: 100vw;
+  display: flex;
+  background: $light_green;
+}
+
+.sc-form-sign_in_up {
+  height: auto;
+  width: 35vw;
+  position: relative;
+  min-height: 800px;
+  background: $white;
+}
+
+.logo-siu {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+.logo {
+  position: relative;
+  width: 130px;
+  height: 40px;
+  margin-top: 50px;
+  display: block;
+}
+
+.form-sign_in_up {
+  position: relative;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 36px;
+  z-index: 2;
+  min-height: 500px;
+}
+
+.greeting {
+  color: rgb(26, 26, 26);
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 41px;
+  margin-bottom: 40px;
+  margin-top: 100px;
+}
+
+.submit-sign_in_up {
+  color: $white;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  height: 52px;
+  left: calc(50% - 170px);
+  top: calc(50% - 24px + 28px);
+  font-size: 16px;
+  font-weight: bold;
+  opacity: 1;
+  background: $light_green;
+  border-radius: 4px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  margin-top: 15px;
+}
+
+.bg-sign_in_up {
+  height: 100vh;
+  width: 65vw;
+  min-height: 800px;
+  background: url("/assets/right-cover.jpg") center 0% no-repeat $gray_green;
+}

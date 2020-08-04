@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= t ".title" %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+  </head>
+
+  <body>
+    <div class="row center">
+      <% flash.each do |msg_type, msg| %>
+        <div class="alert alert-<%= msg_type %>"><%= msg %></div>
+      <% end %>
+    </div>
+    <div class="sc-sign_in_up">
+      <div class="sc-form-sign_in_up">
+        <div class="logo-siu">
+          <%= image_tag "logo.svg", class: "logo" %>
+        </div>
+        <%= yield %>
+      </div>
+      <div class="bg-sign_in_up"></div>
+    </div>
+  </body>
+</html>
