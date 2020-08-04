@@ -30,7 +30,7 @@
 }
 
 a {
-  color: #1a1a1a;
+  color: $nero;
   background-color: transparent;
 }
 
@@ -214,7 +214,7 @@ button, input, optgroup, select, textarea {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50%;
-  background-color: #f2f2f2;
+  background-color: $nero;
 }
 
 .img-fluid, .img-thumbnail {
@@ -273,6 +273,19 @@ a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]
   font-weight: 600;
   line-height: 1;
   font-size: 15px;
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &:hover {
+    background-color: $gainsboro;
+  }
+
+  &[class*="dislike"] {
+    color: green;
+  }
 }
 
 .gapo-group>* {
