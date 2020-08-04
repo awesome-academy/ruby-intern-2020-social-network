@@ -5,11 +5,11 @@
       <div class="count-description"><%= t "followed" %></div>
     </div>
     <div class="count-user__item text-center">
-      <div class="count-number gapo-title timeline__title mb-1">...</div>
+      <div class="count-number gapo-title timeline__title mb-1"><%= @user.posts.count %></div>
       <div class="count-description"><%= t "post" %></div>
     </div>
     <div class="count-user__item text-center">
-      <div class="count-number gapo-title timeline__title mb-1">...</div>
+      <div class="count-number gapo-title timeline__title mb-1 like-count"><%= @user.likes.count %></div>
       <div class="count-description"><%= t "likes" %></div>
     </div>
   </div>

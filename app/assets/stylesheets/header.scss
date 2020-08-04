@@ -1,8 +1,8 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import "font-awesome-sprockets";
-@import "font-awesome";
-@import "color.scss";
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+@import 'color';
 
 .gapo-header {
   z-index: 99;
@@ -16,10 +16,10 @@
   right: 0;
   min-height: 72px;
   .align-items-center {
-    align-items: center !important;
+    align-items: center;
   }
   .d-flex {
-    display: flex!important;
+    display: flex;
   }
 }
 
@@ -37,7 +37,7 @@
 .bulkhead {
   width: 1px; 
   height: 34px; 
-  background-color: rgb(238, 238, 238);
+  background-color: $bg-underline;
 }
 
 .header_search-box {
@@ -94,11 +94,11 @@
 }
 
 .shadow-none {
-  box-shadow: none!important;
+  box-shadow: none;
 }
 
 .border-0 {
-  border: 1!important;
+  border: 1;
 }
 
 .header__nav--main {
@@ -144,15 +144,15 @@
 }
 
 .ml-auto {
-  margin-left: auto !important;
+  margin-left: auto ;
 }
 
 .align-items-center {
-  align-items: center !important;
+  align-items: center ;
 }
 
 .d-flex {
-  display: flex !important;
+  display: flex ;
 }
 
 .list-inline, .list-unstyled {
@@ -167,7 +167,7 @@ ul {
 .header__nav--right {
   margin-right: -1rem;
   a {
-    padding: 1rem 12px!important;
+    padding: 1rem 12px;
     .header__logo--requestfriend {
       height: 40px;
     }
@@ -178,7 +178,7 @@ ul {
 }
 
 .avatarlink {
-  display: flex!important;
+  display: flex;
   vertical-align: middle;
   div {
     height: 40px;

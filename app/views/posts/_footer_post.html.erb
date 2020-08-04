@@ -1,0 +1,19 @@
+<div class="post-item__stats d-flex">
+  <%= link_to "#", class: "post-item__stats__item d-flex align-items-center mr-auto text-dark" do %>
+    <i class="fa fa-thumbs-up"></i>like_count
+  <% end %>
+  <%= link_to "#", class: "post-item__stats__item text-dark" do %>
+    comment_count
+  <% end %>
+</div>
+<div class="post-item__actions gapo-group">
+  <%= link_to "#", class: "post-item__action" do %>
+    <i class="fa fa-thumbs-up"></i><%= t "like" %>
+  <% end %>
+  <%= link_to "#", class: "post-item__action" do %>
+    <i class="fa fa-comment"></i><%= t "comment" %>
+  <% end %>
+  <%= link_to "#", class: "post-item__action" do %>
+    <i class="fa fa-share"></i><%= t "share" %>
+  <% end %>
+</div>

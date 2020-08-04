@@ -1,0 +1,33 @@
+<%= form_for Post.new, remote: true do |f| %>
+  <div class="d-flex align-items-start">
+    <% if current_user.avatar.attached? %>
+      <%= link_to users_user_path(current_user), class: "post-item__avatar gapo-avatar gapo-avatar--40 mr-2" do %>
+        <%= image_tag current_user.avatar, class: "avatar" %>
+      <% end %>
+    <% else %>
+      <%= link_to users_user_path(current_user), class: "post-item__avatar gapo-avatar gapo-avatar--40 mr-2" do %>
+        <%= image_tag "man.svg", class: "avatar" %>
+      <% end %>
+    <% end %>
+    <div class="create-post__box__input">
+      <%= f.text_area :content, placeholder: t("you_want_say_something") %>
+    </div>
+  </div>
+  <div class="create-post__actions d-flex px-3 mt-1">
+    <%= label_tag :post_images_post, class: "icon-upload" do %>
+      <i class="fa fa-image svg-icon picture-icon mr-2 create-post__icon"></i>
+    <% end %>
+    <%= f.file_field :images_post, multiple: true, class: "file-upload" %>
+  </div>
+  <div id="preview-images">
+  </div>
+  <div class="private">
+    <%= label_tag t("public") %>
+    <%= f.radio_button :private, "public_post", checked: true %>
+    <%= label_tag t("private") %>
+    <%= f.radio_button :private, "private_post" %>
+  </div>
+  <div class="mt-3">
+    <%= f.submit t("save"), class: "btn btn-primary btn-block" %>
+  </div>
+<% end %>

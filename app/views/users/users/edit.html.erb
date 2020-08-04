@@ -1,0 +1,13 @@
+<%= form_for [:users, @user] do |f| %>
+  <div class="form-group mb-0 row py-1 row__editable">
+    <%= f.label :avatar %>
+    <%= f.file_field :avatar, class: "form-control" %>
+  </div>
+  <img class="preview-image" id="previewImg_avatar" src="/examples/images/transparent.png" alt="Placeholder">
+  <div class="form-group mb-0 row py-1 row__editable">
+    <%= f.label :image_background %>
+    <%= f.file_field :image_background, class: "form-control" %>
+  </div>
+  <img class="preview-image" id="previewImg_background" src="/examples/images/transparent.png" alt="Placeholder">
+  <%= f.submit t("save") %>
+<% end %>
