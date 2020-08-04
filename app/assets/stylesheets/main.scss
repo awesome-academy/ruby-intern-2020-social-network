@@ -253,7 +253,7 @@ a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]
 }
 
 .text-dark {
-  color: #4d4d4d;
+  color: $matter_horn;
 }
 
 .post-item__actions {
@@ -267,7 +267,7 @@ a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]
 }
 
 .post-item__actions .post-item__action {
-  color: #4d4d4d;
+  color: $matter_horn;
   padding: .4375rem .5rem;
   border-radius: .25rem;
   font-weight: 600;

@@ -13,4 +13,8 @@ module PostsHelper
   def get_user post
     post.user
   end
+
+  def post_comments post
+    @comments = post.comments.root_comments.order(created_at: :asc).includes :sub_comments
+  end
 end

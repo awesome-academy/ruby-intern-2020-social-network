@@ -1,0 +1,17 @@
+<div>
+  <div class="gapo-comment media align-items-center">
+    <%= form_for [post, post.comments.build], remote: true do |f| %>  
+      <%= render "comments/avatar_form_comment" %>
+      <div class="media-body">
+        <div class="comment__form align-items-end pr-2 d-flex">
+          <div class="input_comment">
+            <%= f.hidden_field :post_id, value: post.id %>
+            <%= f.text_area :content, class: "form-control border-0 shadow-none bg-transparent",
+              id: "comment_root_post_#{post.id}" %>
+            <%= f.submit t "save" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

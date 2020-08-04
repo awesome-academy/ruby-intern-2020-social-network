@@ -1,0 +1,8 @@
+<div class="post-item__comments" id="comments-list">
+  <div class="comments__list comments_list_<%= post.id %>">
+    <% post_comments(post).each do |comment| %>
+      <%= render "comments/view_comment", comment: comment, user: comment.user %>
+    <% end %>
+  </div>
+</div>
+<%= render "comments/form_comment", post: post %>

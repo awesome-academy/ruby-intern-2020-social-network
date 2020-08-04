@@ -1,0 +1,11 @@
+<% if user.avatar.attached? %>
+  <%= link_to users_user_path(user),
+  class: "gapo-avatar gapo-avatar--32 mr-2" do %>
+    <%= image_tag user.avatar, class: "gapo-avatar-comment" %>
+  <% end %>
+<% else %>
+  <%= link_to users_user_path(user),
+  class: "gapo-avatar gapo-avatar--32 mr-2" do %>
+    <%= image_tag "man.svg", class: "gapo-avatar-comment" %>
+  <% end %>
+<% end %>
