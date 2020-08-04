@@ -7,7 +7,7 @@
           <div class="input_comment">
             <%= f.hidden_field :post_id, value: post.id %>
             <%= f.text_area :content, class: "form-control border-0 shadow-none bg-transparent",
-              id: "comment_root_post_#{post.id}" %>
+              id: "comment_root_post_#{post.id}", maxlength: Settings.max_text_area_comment %>
             <%= f.submit t "save" %>
           </div>
         </div>

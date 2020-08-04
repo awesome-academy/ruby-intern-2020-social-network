@@ -51,6 +51,7 @@ class User < ApplicationRecord
                        on: :create
 
   scope :search, ->(name){where("name LIKE ?", "%#{name}%")}
+  scope :by_ids, ->(ids){where(id: ids)}
 
   has_secure_password
 

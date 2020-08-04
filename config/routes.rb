@@ -24,5 +24,6 @@ Rails.application.routes.draw do
       resources :member_groups
     end
     resources :topics
+    resources :suggest_friends, only: :index
   end
 end

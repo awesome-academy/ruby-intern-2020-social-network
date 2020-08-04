@@ -2,7 +2,7 @@
 
 .aside__wrapper {
   position: fixed;
-  width: 352px;
+  width: 250px;
   height: calc(100% - 3.5rem);
   overflow: auto;
 }
@@ -11,6 +11,10 @@
   height: 100%;
   position: relative;
   background-color: $white;
+}
+
+.col-right {
+  margin-left: 45px;
 }
 
 .gapo-aside {
@@ -43,8 +47,9 @@
 }
 
 .gapo-subtitle {
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: 600;
+  padding-bottom: 10px;
 }
 
 .pl-3, .px-3 {
