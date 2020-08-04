@@ -1,0 +1,3 @@
+class IntroUser < ApplicationRecord
+  belongs_to :user
+end
