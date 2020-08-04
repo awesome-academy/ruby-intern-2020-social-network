@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   VALID_EMAIL_REGEX = Settings.email_regex
-  USERS_PARAMS = %i(name email password password_confirmation).freeze
+  USERS_PARAMS = %i(name email password password_confirmation
+                    avatar image_background).freeze
   PASSWORD_RESET_PARAMS = %i(password password_confirmation).freeze
 
   attr_accessor :remember_token, :reset_token
@@ -49,7 +50,7 @@ class User < ApplicationRecord
                        length: {minimum: Settings.user.password_length},
                        on: :create
 
-  scope :search, ->name{where("name LIKE ?", "%#{name}%")}
+  scope :search, ->(name){where("name LIKE ?", "%#{name}%")}
 
   has_secure_password
 

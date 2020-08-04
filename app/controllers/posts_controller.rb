@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :user_signed_in
   before_action :find_post, only: :destroy
+  before_action :load_friend
 
   def index
     @post = Post.new

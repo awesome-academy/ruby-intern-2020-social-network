@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       resources :password_resets, except: %i(index show destroy)
       resources :users do
         resources :images, only: %i(index new)
+        resources :friend_requests, except: %i(new show edit)
       end
       resources :intro_users
     end

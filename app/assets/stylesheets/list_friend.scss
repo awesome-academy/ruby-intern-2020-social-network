@@ -1,0 +1,79 @@
+@import 'color';
+
+.aside__wrapper {
+  position: fixed;
+  width: 352px;
+  height: calc(100% - 3.5rem);
+  overflow: auto;
+}
+
+.aside__wrapper {
+  height: 100%;
+  position: relative;
+  background-color: $white;
+}
+
+.gapo-aside {
+  background-color: $white;
+  min-height: calc(100vh - 3.5rem);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.align-content-between {
+  align-content: space-between;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.pb-3, .py-3 {
+  padding-bottom: 1rem;
+}
+
+.pt-3, .py-3 {
+  padding-top: 1rem;
+}
+
+.gapo-aside--right .gapo-subtitle {
+  margin-left: .25rem;
+}
+
+.gapo-subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.pl-3, .px-3 {
+  padding-left: 1rem;
+}
+
+.pr-3, .px-3 {
+  padding-right: 1rem;
+}
+
+.chats__list {
+  height: 440px;
+}
+
+.chat__item {
+  padding: .375rem .75rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.chat__info {
+  height: 2rem;
+  line-height: 2rem;
+  padding: 0 .25rem;
+}
+
+.chat__info .chat__author {
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
+}

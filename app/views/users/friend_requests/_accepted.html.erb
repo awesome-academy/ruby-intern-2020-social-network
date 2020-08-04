@@ -1,0 +1,8 @@
+<div class="dropdown invited">
+  <div class="btn btn-block btn-sm btn-light btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <%= t "friend" %>
+  </div>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <%= link_to t("delete_friend"), users_user_friend_request_path(user, friend_request), method: :delete, remote: true, class: "dropdown-item"  %>
+  </div>
+</div>

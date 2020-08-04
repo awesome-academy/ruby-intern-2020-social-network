@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   include SessionsHelper
+  include FriendRequestsHelper
 
   before_action :set_locale
 
@@ -30,5 +31,9 @@ class ApplicationController < ActionController::Base
 
     flash[:danger] = t "user_not_exist"
     redirect_to root_path
+  end
+
+  def load_friend
+    @friends = User.find friend
   end
 end

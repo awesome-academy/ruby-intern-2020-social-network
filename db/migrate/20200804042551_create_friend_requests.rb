@@ -3,7 +3,7 @@ class CreateFriendRequests < ActiveRecord::Migration[5.2]
     create_table :friend_requests do |t|
       t.integer :requestor_id
       t.integer :receiver_id
-      t.integer :status
+      t.integer :status, default: 0
 
       t.timestamps
     end

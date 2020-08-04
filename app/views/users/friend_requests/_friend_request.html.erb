@@ -1,0 +1,9 @@
+<% if friend.include? user.id %>
+  <%= render "users/friend_requests/accepted", user: user, friend_request: find_friend(user) %>
+<% elsif check_user_requestor user %>
+  <%= render "users/friend_requests/accept", user: user, friend_request: find_request_from(user) %>
+<% elsif check_user_receiver user %>
+  <%= render "users/friend_requests/invited", user: user, friend_request: find_request_to(user) %>
+<% else %>
+  <%= render "users/friend_requests/send_invite", user: user %>
+<% end %>
