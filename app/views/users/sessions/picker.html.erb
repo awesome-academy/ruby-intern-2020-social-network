@@ -1,0 +1,16 @@
+<div class="sc-topics">
+  <div class="topics-title"><%= t "favorites" %></div>
+  <div class="sc-topics-item">
+    <%= form_for [:users, current_user] do |f| %>
+      <%= f.hidden_field :name %>
+      <% @topics.each_with_index do |topic, index| %>
+        <% if topic.users.find_by(id: current_user.id).present? %>
+          <%= render "topics_picking", f: f, topic: topic, index: index %>
+        <% else %>
+          <%= render "topics_picked", f: f, topic: topic, index: index %>
+        <% end %>
+      <% end %>
+      <%= f.submit t("save") %>
+    <% end %>
+  </div>
+</div>

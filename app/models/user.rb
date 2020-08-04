@@ -16,6 +16,7 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :topic_items, dependent: :destroy
+  has_many :topics, through: :topic_items
   has_many :friend_requests_as_requestor, foreign_key: :requestor_id,
                                           class_name: FriendRequest.name,
                                           dependent: :destroy
@@ -33,13 +34,16 @@ class User < ApplicationRecord
   has_many :notifications, dependent: :destroy
   has_many :messages, dependent: :destroy
 
+  accepts_nested_attributes_for :topic_items, allow_destroy: true
+
   validates :name, presence: true, length: {maximum: Settings.user.name_length}
   validates :email, presence: true,
                     length: {maximum: Settings.user.email_length},
                     format: {with: VALID_EMAIL_REGEX},
                     uniqueness: true
   validates :password, presence: true,
-                       length: {minimum: Settings.user.password_length}
+                       length: {minimum: Settings.user.password_length},
+                       on: :create
 
   has_secure_password
 

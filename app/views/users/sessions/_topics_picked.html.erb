@@ -1,0 +1,8 @@
+<%= f.fields_for :topic_items, current_user.topic_items.find_by(topic_id: topic.id) do |item| %>
+  <%= label "user_topic_items_attributes_#{index}_", :_destroy do %>
+    <div class="topic-item picked-item">
+      <span><%= topic.name %></span>
+      <%= item.check_box :_destroy, {checked: false}, true, false %>
+    </div>
+  <% end %>
+<% end %>

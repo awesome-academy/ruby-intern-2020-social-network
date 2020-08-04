@@ -8,3 +8,4 @@ user:
 session:
   create:
     checkbox: 1
+per_page_topics: 20

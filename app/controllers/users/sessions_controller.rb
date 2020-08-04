@@ -1,4 +1,6 @@
 class Users::SessionsController < Users::BaseController
+  before_action :load_topics
+
   def new; end
 
   def create

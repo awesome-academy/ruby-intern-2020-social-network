@@ -1,0 +1,8 @@
+<%= f.fields_for :topic_items, current_user.topic_items.build do |item| %>
+  <%= label "user_topic_items_attributes_#{index}_", :topic_id do %>
+    <div class="topic-item">
+      <span><%= topic.name %></span>
+      <%= item.check_box :topic_id, {checked: false}, topic.id, false %>
+    </div>
+  <% end %>
+<% end %>
