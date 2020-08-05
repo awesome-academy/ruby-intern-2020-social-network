@@ -2,3 +2,9 @@ vi:
   layouts:
     application:
       title: "SNS"
+    header:
+      homepage: "Trang chu"
+      news: "Tin tuc"
+      group: "Nhom"
+      video: "Video"
+      chat: "Nhan tin"
