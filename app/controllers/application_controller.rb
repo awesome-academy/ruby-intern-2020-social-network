@@ -12,4 +12,8 @@ class ApplicationController < ActionController::Base
   def default_url_options
     {locale: I18n.locale}
   end
+
+  def load_topics
+    @topics = Topic.page(params[:page]).per Settings.per_page_topics
+  end
 end

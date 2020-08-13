@@ -28,7 +28,7 @@ module SessionsHelper
                                        forget user
                                      end
     log_in user
-    redirect_back_or user
+    render :picker
   end
 
   def logged_in?
