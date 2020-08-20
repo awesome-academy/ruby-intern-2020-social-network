@@ -1,23 +1,22 @@
 class Users::UsersController < Users::BaseController
   layout "layouts/application", only: %i(show update)
-  layout "users/layouts/application", only: %i(new)
+  layout "users/layouts/application", only: :new
 
   before_action :user_signed_in, only: %i(show update)
   before_action :find_user, only: %i(show edit)
   before_action :load_topics
-  before_action :check_current_user, only: :show
+  before_action :new_post, :get_intro, :check_current_user, only: :show
 
   def show
-    @intro_user = @user.intro_user
     if check_current_user
       @personal_posts = current_user.posts.order_by_time
-                                    .page(params[:page]).per 5
+                                    .page(params[:page]).per Settings.per_post
     else
       @personal_posts = @user.posts.post_public("public_post")
-                             .order_by_time.page(params[:page]).per 5
+                             .order_by_time.page(params[:page])
+                             .per Settings.per_post
     end
     respond_to do |format|
-      format.html
       format.js
     end
   end
@@ -65,5 +64,13 @@ class Users::UsersController < Users::BaseController
 
   def check_current_user
     return true if @user.id == current_user.id
+  end
+
+  def get_intro
+    @intro_user = @user.intro_user
+  end
+
+  def new_post
+    @post = Post.new
   end
 end

@@ -1,0 +1,42 @@
+<div class="modal fade" id="largeShoes" tabindex="-1" role="dialog" aria-labelledby="modalLabelLarge" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-title gapo-subtitle"><%= t "gapo" %></div>
+      </div>
+      <div class="modal-body">
+        <div class="user-like-container">
+          <div class="scrollbar-container ps ps--active-y">
+            <div>
+              <ul class="list-unstyled">
+                <% post.likes.each do |like| %>
+                  <li>
+                    <div class="side-menu__item alpha media align-items-center">
+                      <div class="d-flex flex-position">
+                        <% if like.user.avatar.attached? %>
+                          <%= link_to users_user_path(like.user),
+                          class: "post-item__avatar gapo-avatar gapo-avatar--40 mr-2" do %>
+                            <%= image_tag like.user.avatar %>
+                          <% end %>
+                        <% else %>
+                          <%= link_to users_user_path(like.user),
+                          class: "post-item__avatar gapo-avatar gapo-avatar--40 mr-2" do %>
+                            <%= image_tag "man.svg" %>
+                          <% end %>
+                        <% end %>
+                      </div>
+                      <div class="row no-gutters media-body align-items-center"><%= like.user.name %></div>
+                    </div>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
