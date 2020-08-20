@@ -1,4 +1,5 @@
 class Users::SessionsController < Users::BaseController
+  before_action :check_logout, only: %i(new create)
   before_action :load_topics
 
   def new; end
@@ -17,5 +18,14 @@ class Users::SessionsController < Users::BaseController
     logout if logged_in?
     flash[:success] = t ".logout_success"
     redirect_to signin_path
+  end
+
+  private
+
+  def check_logout
+    return if current_user.blank?
+
+    flash[:danger] = t "not_yet_logout"
+    redirect_to root_path
   end
 end

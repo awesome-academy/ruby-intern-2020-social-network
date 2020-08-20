@@ -10,3 +10,5 @@ session:
     checkbox: 1
 per_page_topics: 20
 size_user_images: "100x100"
+minutes: 60
+hours: 3600

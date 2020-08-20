@@ -100,3 +100,78 @@
 input[type=file][data-direct-upload-url][disabled] {
   display: none;
 }
+
+.user-like-container {
+  height: 600px;
+  overflow: auto;
+  width: 200px;
+}
+
+container {
+  position: relative;
+  height: 100%;
+}
+
+.ps {
+  overflow: hidden!important;
+  overflow-anchor: none;
+  -ms-overflow-style: none;
+  touch-action: auto;
+  -ms-touch-action: auto;
+}
+
+.list-unstyled {
+  margin-bottom: 0;
+}
+
+.list-inline, .list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+dl, ol, ul {
+  margin-top: 0;
+}
+
+.side-menu__item {
+  position: relative;
+  padding: .625rem 1rem;
+  transition: all .2s ease-in-out;
+}
+
+.btn-sm {
+  padding: .375rem .5rem;
+  font-size: .875rem;
+  line-height: 1;
+  border-radius: .25rem;
+}
+
+.btn-light {
+  color: #212529;
+  background-color: #e5e5e5;
+  border-color: #e5e5e5;
+}
+
+.avatar {
+  width: 4rem;
+  height: 4rem;
+}
+
+.avatar-comment {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.avatar-comment-form {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.preview-image {
+  width: 10rem;
+  height: 10rem;
+}
+
+input[topic="topic-item"] {
+  display: none;
+}

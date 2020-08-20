@@ -15,6 +15,9 @@
     <%= f.label :password_confirmation, t(".password_confirmation") %>
     <%= f.password_field :password_confirmation, class: "form-control" %>
 
+    <%= f.label :avatar, t(".upload") %>
+    <%= f.file_field :avatar, class: "form-control" %>
+
     <%= f.submit t(".sign_up"), class: "submit-sign_in_up" %>
   <% end %>
 </div>

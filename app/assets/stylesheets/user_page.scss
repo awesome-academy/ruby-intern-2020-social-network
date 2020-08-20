@@ -20,6 +20,7 @@
   width: 100%;
   padding-right: .375rem;
   padding-left: .375rem;
+  width: 52rem;
 }
 
 .justify-content-center {
@@ -60,11 +61,16 @@
 }
 
 .profile__head__cover {
-  height: 18.166rem;
+  height: 25rem;
   background-color: $gray;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
+
+  .gapo-background-page{
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .position-relative {
@@ -80,8 +86,8 @@
 }
 
 .profile__head__avatar {
-  width: 10.25rem;
-  height: 10.25rem;
+  width: 15rem;
+  height: 15rem;
   position: absolute;
   left: 0;
   right: 0;
@@ -89,6 +95,12 @@
   margin: auto;
   background: $white;
   border-radius: 50%;
+
+  .gapo-avatar-page {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
 }
 
 .rounded-circle {
@@ -148,8 +160,8 @@ dl, ol, ul {
 
 .profile__head__nav .nav-link {
   color: $nero;
-  padding: 1rem;
-  max-height: 3.25rem;
+  padding: 1.5rem;
+  font-size: 1.1em
 }
 
 .jrnEzY {

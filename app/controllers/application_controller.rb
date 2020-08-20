@@ -13,6 +13,13 @@ class ApplicationController < ActionController::Base
     {locale: I18n.locale}
   end
 
+  def user_signed_in
+    return if logged_in?
+
+    flash[:danger] = t "not_yet_login"
+    redirect_to signin_path
+  end
+
   def load_topics
     @topics = Topic.page(params[:page]).per Settings.per_page_topics
   end
