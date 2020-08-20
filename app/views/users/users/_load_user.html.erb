@@ -1,0 +1,16 @@
+<div class="row justify-content-center" id="users_search">
+  <div class="col col-500 py-4">
+    <div id="list-post">
+      <div class="gapo-box">
+        <ul class="search-group__list list-unstyled">
+          <% users.each do |user| %>
+            <%= render "users/users/search", user: user %>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="infinite-scrolling">
+  <%= paginate users, theme: "twitter-bootstrap-3" %>
+</div>

@@ -1,0 +1,8 @@
+$('.center_page').html('<%= j render "users/users/load_user", users: @users %>');
+$('.search-box__input').val('');
+<% if @users.next_page %>
+  $('.pagination').replaceWith('<%= j paginate @users %>');
+<% else %>
+  $(window).off('scroll');
+  $('.pagination').remove();
+<% end %>

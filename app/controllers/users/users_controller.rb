@@ -7,6 +7,20 @@ class Users::UsersController < Users::BaseController
   before_action :load_topics
   before_action :new_post, :get_intro, :check_current_user, only: :show
 
+  def index
+    if params[:name].blank?
+      flash[:danger] = t "empty_field"
+      redirect_to root_path
+    else
+      @users = User.search(params[:name])
+                   .page(params[:page]).per Settings.per_user
+      respond_to do |format|
+        format.html
+        format.js
+      end
+    end
+  end
+
   def show
     if check_current_user
       @personal_posts = current_user.posts.order_by_time

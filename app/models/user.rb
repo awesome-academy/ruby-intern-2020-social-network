@@ -49,6 +49,8 @@ class User < ApplicationRecord
                        length: {minimum: Settings.user.password_length},
                        on: :create
 
+  scope :search, ->name{where("name LIKE ?", "%#{name}%")}
+
   has_secure_password
 
   class << self
