@@ -1,0 +1,17 @@
+<div class="post-item__content">
+  <br>
+  <div>
+    <div class="text-display">
+      <%= post.content %>
+    </div>
+  </div>
+</div>
+<% if post.images_post.attached? %>
+  <div class="post-item__attachment post-item__attachment--<%= post.images_post.count %>">
+    <% post.images_post.each_with_index do |image, index| %>
+      <div class="attachment__item attachment__item__vertical--<%= index + 1 %>">
+        <%= image_tag image, class: "img-fluid" %>
+      </div>
+    <% end %>
+  </div>
+<% end %>

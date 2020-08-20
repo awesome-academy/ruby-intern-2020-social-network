@@ -2,7 +2,7 @@
   <%= label "user_topic_items_attributes_#{index}_", :_destroy do %>
     <div class="topic-item picked-item">
       <span><%= topic.name %></span>
-      <%= item.check_box :_destroy, {checked: false}, true, false %>
+      <%= item.check_box :_destroy, {checked: false, topic: "topic-item"}, true, false %>
     </div>
   <% end %>
 <% end %>

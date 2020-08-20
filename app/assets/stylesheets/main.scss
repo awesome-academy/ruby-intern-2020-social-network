@@ -1,0 +1,297 @@
+@import 'color';
+
+.col-aside {
+  max-width: 22.75rem;
+}
+
+.col-500 {
+  max-width: 32rem;
+}
+
+.create-post {
+  min-width: 31rem;
+}
+
+.create-post {
+  position: relative;
+  z-index: 311;
+}
+
+.align-items-start {
+  align-items: flex-start;
+}
+
+.gapo-avatar.gapo-avatar--40 {
+  width: 4rem;
+}
+
+.mr-2, .mx-2 {
+  margin-right: .5rem;
+}
+
+a {
+  color: #1a1a1a;
+  background-color: transparent;
+}
+
+.create-post .create-post__box__input {
+  flex: 1 1;
+  position: relative;
+}
+
+.create-post .create-post__input {
+  margin-right: 2.5rem;
+  width: 100%;
+  resize: none;
+  background: transparent;
+  font-size: 1.125rem;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+  height: 79px;
+  width: 450px;
+}
+
+button, input, optgroup, select, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.create-post .create-post__actions {
+  border-top: 1px solid $revell;
+  border-bottom: 1px solid $revell;
+  padding: .125rem;
+  max-height: 3rem;
+  width: 100%;
+}
+
+.pr-3, .px-3 {
+  padding-right: 1rem;
+}
+
+.mt-1, .my-1 {
+  margin-top: .25rem;
+}
+
+.svg-icon.picture-icon {
+  font-size: 25px;
+}
+
+.svg-icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 100% auto;
+}
+
+.mt-3, .my-3 {
+  margin-top: 1rem;
+}
+
+.btn.btn-block {
+  display: flex;
+}
+
+.btn.btn-primary {
+  color: $white;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-primary {
+  color: $nero;
+  background-color: $green;
+  border-color: $green;
+}
+
+.post-item {
+  background-color: $white;
+  margin-bottom: .75rem;
+  box-shadow: 0 1px 3px $box_shadow;
+  border-radius: .25rem;
+}
+
+.post-item__head {
+  padding: .75rem;
+  position: relative;
+}
+
+.media {
+  display: flex;
+  align-items: flex-start;
+}
+
+.media-body {
+  flex: 1 1;
+}
+
+.font-weight-bold {
+  font-weight: 600;
+}
+
+.mb-1, .my-1 {
+  margin-bottom: .25rem;
+}
+
+.float-left {
+  float: left;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.font-size-small {
+  font-size: 1.1rem;
+}
+
+.text-secondary {
+  color: grey;
+}
+
+.post-item__content {
+  line-height: 1.4;
+}
+
+.post-item__content, pre {
+  word-break: break-word;
+}
+
+.post-item__content {
+  line-height: 1.5;
+}
+
+.post-item__content {
+  padding: 0 .75rem;
+}
+
+.text-display {
+  word-break: break-word;
+}
+
+.post-item__attachment {
+  margin-top: .75rem;
+}
+
+.post-item__attachment {
+  margin: -1px;
+  display: block;
+}
+
+.post-item__attachment .attachment__item__vertical--1, .post-item__attachment .attachment__item__vertical--2 {
+  width: 50%;
+}
+
+.post-item__attachment .attachment__item__vertical--3, .post-item__attachment .attachment__item__vertical--4, .post-item__attachment.post-item__attachment--5 .attachment__item__vertical--5 {
+  width: 33.33333333%;
+}
+
+.post-item__attachment .attachment__item {
+  padding: 1px;
+  float: left;
+}
+
+.post-item__attachment .attachment__item>img {
+  display: block;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-color: #f2f2f2;
+}
+
+.img-fluid, .img-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
+
+img, svg {
+  vertical-align: middle;
+}
+
+img {
+  border-style: none;
+}
+
+.post-item__stats {
+  width: 100%;
+  padding: 0 .5rem;
+}
+
+a:not([href]):not([tabindex]) {
+  cursor: pointer;
+}
+
+a:not([href]):not([tabindex]), a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.post-item__stats__item {
+  padding: 1rem .25rem;
+  display: block;
+  line-height: 1.45;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.text-dark {
+  color: #4d4d4d;
+}
+
+.post-item__actions {
+  border-top: 1px solid $revell;
+  border-bottom: 1px solid $revell;
+  padding: .65rem;
+}
+
+.gapo-group {
+  display: flex;
+}
+
+.post-item__actions .post-item__action {
+  color: #4d4d4d;
+  padding: .4375rem .5rem;
+  border-radius: .25rem;
+  font-weight: 600;
+  line-height: 1;
+  font-size: 15px;
+}
+
+.gapo-group>* {
+  display: flex;
+  flex: 1 1;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+input.file-upload {
+  display: none;
+}
+
+label.icon-upload {
+  padding-left: 220px;
+}
+
+.private {
+  margin-top: 5px;
+}

@@ -1,8 +1,14 @@
 <li>
-  <%= link_to("#", class: "avatarlink") do %>
-    <div>
-      <%= image_tag("icons/request-friend.svg", class: "avatar") %>
+  <div class="dropdown">
+    <%= link_to("#", class: "avatarlink btn btn-secondary dropdown-toggle", role: "button", id: "dropdownMenuLink", "data-toggle": "dropdown", "aria-haspopup": "true", "aria-expanded": "false") do %>
+      <div>
+        <%= image_tag("icons/request-friend.svg", class: "avatar") %>
+      </div>
+      <span><%= current_user.name %></span>
+    <% end %>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      <%= link_to t(".profile"), users_user_path(current_user), class: "dropdown-item" %>
+      <%= link_to t(".log_out"), logout_path, method: :delete, class: "dropdown-item" %>
     </div>
-    <span><%= current_user.name %></span>
-  <% end %>
+  </div>
 </li>

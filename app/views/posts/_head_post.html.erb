@@ -1,0 +1,25 @@
+<div class="post-item__head">
+  <div class="post-item__info media align-items-center">
+    <% if get_user(post).avatar.attached? %>
+      <%= link_to users_user_path(get_user post), class: "post-item__avatar gapo-avatar gapo-avatar--40 mr-2" do %>
+        <%= image_tag get_user(post).avatar, class: "avatar" %>
+      <% end %>
+    <% else %>
+      <%= link_to users_user_path(get_user post), class: "post-item__avatar gapo-avatar gapo-avatar--40 mr-2" do %>
+        <%= image_tag "man.svg", class: "avatar" %>
+      <% end %>
+    <% end %>
+    <div class="media-body">
+      <%= link_to get_user(post).name, users_user_path(get_user post), class: "post-item__author font-weight-bold mb-1 float-left" %>
+      <div class="d-flex align-items-center font-size-small text-secondary clearfix">
+        <%= time_ago Time.now, post.created_at %>
+        <i class="fa fa-globe"></i>
+      </div>
+    </div>
+    <% if get_user(post).id == current_user.id %>
+      <div class="destroy_post">
+        <%= link_to "&times;".html_safe, post_path(post),data: {confirm: "Sure?"}, method: :delete %>
+      </div>
+    <% end %>
+  </div>
+</div>

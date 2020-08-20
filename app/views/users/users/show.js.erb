@@ -1,0 +1,7 @@
+$('#my-posts').append('<%= j render "posts/posts", posts: @personal_posts %>');
+<% if @personal_posts.next_page %>
+  $('.pagination').replaceWith('<%= j paginate @personal_posts %>');
+<% else %>
+  $(window).off('scroll');
+  $('.pagination').remove();
+<% end %>
