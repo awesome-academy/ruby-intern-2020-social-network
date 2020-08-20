@@ -1,0 +1,55 @@
+<main class="gapo-main row">
+  <div class="col">
+    <div class="row justify-content-center">
+      <div class="col col-900 py-4">
+        <div class="text-center rounded bg-white shadow mb-4 profile__head position-relative">
+          <div class="profile__head__cover rounded-top position-relative">
+            <% if @user.image_background.attached? %>
+              <%= image_tag @user.image_background %>
+            <% else %>
+              <div></div>
+            <% end %>
+            <div class="profile__head__avatar rounded-circle">
+              <% if @user.avatar.attached? %>
+                <%= image_tag @user.avatar %>
+              <% else %>
+                <%= image_tag "man.svg", class: "gapo-avatar" %>
+              <% end %>
+            </div>
+          </div>
+          <div class="profile__head__content">
+            <h1 class="profile__name font-weight-semi-bold"><%= @user.name %></h1>
+          </div>
+          <div class="profile__head__nav d-flex px-3 hide_mobile">
+            <ul class="nav mr-auto">
+              <li class="nav-item"><%= link_to t(".time_line"), "#", class: "sc-hqyNC jrnEzY nav-link active font-weight-semi-bold" %></li>
+              <% if @user == current_user %>
+                <li class="nav-item"><%= link_to t(".introduction"), edit_users_intro_user_path(current_user),
+                  class: "sc-hqyNC jrnEzY nav-link active font-weight-semi-bold" %></li>
+              <% end %>
+              <li class="nav-item"><%= link_to t(".friend"), "#",
+                class: "sc-hqyNC jrnEzY nav-link active font-weight-semi-bold" %></li>
+              <li class="nav-item"><%= link_to t(".image"), users_user_images_path(@user),
+                class: "sc-hqyNC jrnEzY nav-link active font-weight-semi-bold" %></li>
+            </ul>
+            <div class="d-flex align-items-center align-items-start">
+              <%= link_to(edit_users_user_path, class: "btn btn-secondary setting__action border-0 d-flex justify-content-center ml-2") do %>
+                <i class="fa fa-cog"></i>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-360">
+            <div class="sc-user">
+              <%= render "count_number" %>
+              <%= render "intro", intro_user: @intro_user %>
+              <%= render "image", user: @user %>
+            </div>
+          </div>
+          <div class="col col-500"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

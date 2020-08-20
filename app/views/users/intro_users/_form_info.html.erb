@@ -1,0 +1,44 @@
+<div class="form-group mb-0 row py-1 row__editable">
+  <%= f.label :gender, class: "col-4 col-form-label" %>
+  <div class="col-8">
+    <%= label_tag t(".man") %>
+    <%= f.radio_button :gender, "man" %>
+    <%= label_tag t(".woman") %>
+    <%= f.radio_button :gender, "woman" %>
+  </div>
+</div>
+<div class="form-group mb-0 row py-1 row__editable">
+  <%= f.label :birth_day, class: "col-4 col-form-label" %>
+  <div class="col-8">
+    <%= f.date_field :birth_day, class: "form-control" %>
+  </div>
+</div>
+<div class="form-group mb-0 row py-1 row__editable">
+  <%= f.label :marital_status, class: "col-4 col-form-label" %>
+  <div class="col-8">
+    <%= label_tag t(".single") %>
+    <%= f.radio_button :marital_status, "single" %>
+    <%= label_tag t(".relationship") %>
+    <%= f.radio_button :marital_status, "relationship" %>
+    <%= label_tag t(".get_married") %>
+    <%= f.radio_button :marital_status, "get married" %>
+  </div>
+</div>
+<div class="form-group mb-0 row py-1 row__editable">
+  <%= f.label :address, class: "col-4 col-form-label" %>
+  <div class="col-8">
+    <%= f.text_field :address, class: "form-control" %>
+  </div>
+</div>
+<div class="form-group mb-0 row py-1 row__editable">
+  <%= f.label :job, class: "col-4 col-form-label" %>
+  <div class="col-8">
+    <%= f.text_field :job, class: "form-control" %>
+  </div>
+</div>
+<div class="form-group mb-0 row py-1 row__editable">
+  <%= f.label :school, class: "col-4 col-form-label" %>
+  <div class="col-8">
+    <%= f.text_field :school, class: "form-control" %>
+  </div>
+</div>

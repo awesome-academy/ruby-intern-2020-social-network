@@ -1,0 +1,397 @@
+@import 'color';
+
+.gapo-main {
+  min-height: 100%;
+  padding-top: 3.5rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -.375rem;
+  margin-left: -.375rem;
+}
+
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  padding-right: .375rem;
+  padding-left: .375rem;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.col-900 {
+  max-width: 90rem;
+}
+
+.py-4 {
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-4, .my-4 {
+  margin-bottom: 1.5rem;
+}
+
+.shadow {
+  box-shadow: 0 1px 3px $box_shadow;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.rounded {
+  border-radius: .25rem;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.profile__head__cover {
+  height: 18.166rem;
+  background-color: $gray;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.rounded-right, .rounded-top {
+  border-top-right-radius: .25rem;
+}
+
+.rounded-top {
+  border-top-left-radius: .25rem;
+}
+
+.profile__head__avatar {
+  width: 10.25rem;
+  height: 10.25rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1rem;
+  margin: auto;
+  background: $white;
+  border-radius: 50%;
+}
+
+.rounded-circle {
+  border-radius: 50%;
+}
+
+.profile__head__avatar .gapo-avatar {
+  border: .25rem solid $white;
+}
+
+.gapo-avatar {
+  background-position: 50%;
+}
+
+.gapo-avatar {
+  display: block;
+  background-color: $gray;
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+  background-size: cover;
+}
+
+.profile__head__nav {
+  margin: 0 .75rem;
+  border-top: 1px solid $gray;
+}
+
+.pl-3, .px-3 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+d-flex {
+  display: flex;
+}
+
+.mr-auto, .mx-auto {
+  margin-right: auto;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+dl, ol, ul {
+  margin-top: 0;
+}
+
+.profile__head__nav .nav-link.active {
+  border-bottom: .1875rem solid $green;
+}
+
+.profile__head__nav .nav-link {
+  color: $nero;
+  padding: 1rem;
+  max-height: 3.25rem;
+}
+
+.jrnEzY {
+  cursor: pointer;
+}
+
+.font-weight-semi-bold {
+  font-weight: 600;
+}
+
+.nav-link {
+  display: block;
+  padding: .5rem 1rem;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+a {
+  color: $nero;
+  background-color: transparent;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.ml-2, .mx-2 {
+  margin-left: .5rem;
+}
+
+.col-360 {
+  max-width: 34rem;
+  position: relative;
+}
+
+.p-3 {
+  padding: 1rem;
+}
+
+.mb-3, .my-3 {
+  margin-bottom: 1rem;
+}
+
+.count-user__item {
+  flex-grow: 1;
+  position: relative;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.timeline__title {
+  font-size: 1.125rem;
+}
+
+.gapo-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.mb-1, .my-1 {
+  margin-bottom: .25rem;
+}
+
+.count-description {
+  color: grey;
+  font-size: .875rem;
+}
+
+.mt-2, .my-2 {
+  margin-top: .5rem;
+}
+
+.pb-1, .py-1 {
+  padding-bottom: .25rem;
+}
+
+.pt-1, .py-1 {
+  padding-top: .25rem;
+}
+
+.pl-0, .px-0 {
+  padding-left: 0;
+}
+
+.col-1 {
+  flex: 0 0 8.33333%;
+  max-width: 8.33333%;
+  position: relative;
+  width: 100%;
+  padding-right: .375rem;
+}
+
+.pl-2, .px-2 {
+  padding-left: .5rem;
+}
+
+.col-11 {
+  flex: 0 0 91.66667%;
+  max-width: 91.66667%;
+  position: relative;
+  width: 100%;
+  padding-right: .375rem;
+}
+
+.d-inline {
+  display: inline;
+  line-height: 24px;
+}
+
+.font-weight-semi-bold {
+  font-weight: 600;
+}
+
+.mb-2, .my-2 {
+  margin-bottom: .5rem;
+}
+
+.mt-2, .my-2 {
+  margin-top: .5rem;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.text-primary {
+  color: $green;
+}
+
+.ml-auto, .mx-auto {
+  margin-left: auto;
+}
+
+.mt-2, .my-2 {
+  margin-top: .5rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -.375rem;
+  margin-left: -.375rem;
+}
+
+.col-4 {
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+}
+
+.col-4 {
+  position: relative;
+  width: 100%;
+  padding-right: .375rem;
+  padding-left: .375rem;
+}
+
+.gapo-thumbnail {
+  display: block;
+  background-color: $gray;
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-position: 50%;
+}
+
+.mb-2, .my-2 {
+  margin-bottom: .5rem;
+}
+
+.profile-about {
+  font-size: 1.5rem;
+  padding: 1rem 2.75rem 2.75rem;
+}
+
+.pl-5, .px-5 {
+  padding-left: 3rem;
+}
+
+.pr-5, .px-5 {
+  padding-right: 3rem;
+}
+
+.pb-4, .py-4 {
+  padding-bottom: 1.5rem;
+}
+
+.pt-4, .py-4 {
+  padding-top: 1.5rem;
+}
+
+.mb-3, .my-3 {
+  margin-bottom: 1rem;
+}
+
+.pt-2, .py-2 {
+  padding-top: .5rem;
+}
+
+.mb-3, .my-3 {
+  margin-bottom: 1rem;
+}
+
+.profile-about .form-group {
+  border-bottom: 1px solid $gray;
+}
+.pb-1, .py-1 {
+  padding-bottom: .25rem;
+}
+.pt-1, .py-1 {
+  padding-top: .25rem;
+}
+.mb-0, .my-0 {
+  margin-bottom: 0;
+}
+.form-group {
+  margin-bottom: 1rem;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -.375rem;
+  margin-left: -.375rem;
+}
+
+.col-form-label {
+  padding-top: calc(.375rem + 1px);
+  padding-bottom: calc(.375rem + 1px);
+  margin-bottom: 0;
+  font-size: inherit;
+  line-height: 1.5;
+}
+.col-4 {
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+}
+
+.col-8 {
+  flex: 0 0 66.66667%;
+  max-width: 66.66667%;
+  display: flex;
+}

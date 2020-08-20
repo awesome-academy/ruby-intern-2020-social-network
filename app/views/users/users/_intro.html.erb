@@ -1,0 +1,34 @@
+<div class="rounded bg-white shadow mb-3 p-3">
+  <div class="gapo-title timeline__title"><%= t "introduction" %></div>
+  <div class="mt-2">
+    <div class="py-1 d-flex">
+      <div class="icon-info col-1 pl-0"><i class="fa fa-graduation-cap"></i></div>
+      <div class="body-info col-11 pl-2">
+        <div class="d-inline"><span><%= t "stydy_at" %></span></div>
+        <span class="font-weight-semi-bold">
+          <%= intro_user&.school %>
+        </span>
+      </div>
+    </div><div class="py-1 d-flex">
+      <div class="icon-info col-1 pl-0"><i class="fa fa-transgender"></i></div>
+      <div class="body-info col-11 pl-2">
+        <div class="d-inline"><span><%= t "gender" %></span></div>
+        <span class="font-weight-semi-bold">
+          <%= intro_user&.gender %>
+        </span>
+      </div>
+    </div>
+    <div class="py-1 d-flex">
+      <div class="icon-info col-1 pl-0"><i class="fa fa-heart"></i></div>
+      <div class="body-info col-11 pl-2">
+        <div class="d-inline"><span><%= t "marital_status" %></span></div>
+        <span class="font-weight-semi-bold">
+          <%= intro_user&.marital_status %>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex w-100 border-bottom my-2"></div>
+  <div class="gapo-title timeline__title"><%= t "favorites" %></div>
+  <div class="mt-2"></div>
+</div>

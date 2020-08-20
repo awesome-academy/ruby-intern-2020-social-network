@@ -16,4 +16,12 @@ class ApplicationController < ActionController::Base
   def load_topics
     @topics = Topic.page(params[:page]).per Settings.per_page_topics
   end
+
+  def find_user
+    @user = User.find_by id: params[:id]
+    return if @user
+
+    flash[:danger] = t "user_not_exist"
+    redirect_to root_path
+  end
 end

@@ -1,6 +1,12 @@
 class Users::UsersController < Users::BaseController
-  before_action :find_user, only: :update
+  layout "layouts/application", only: %i(show update)
+
+  before_action :find_user, only: :show
   before_action :load_topics
+
+  def show
+    @intro_user = @user.intro_user
+  end
 
   def new
     @user = User.new
@@ -19,9 +25,9 @@ class Users::UsersController < Users::BaseController
   end
 
   def update
-    params[:user][:name] = @user.name
-    if @user.update user_update_params
-      render "layouts/application", layout: false
+    params[:user][:name] = current_user.name
+    if current_user.update user_update_params
+      redirect_to users_user_path
     else
       flash[:danger] = t "update_not_suscess"
       redirect_to topics_path
@@ -37,14 +43,7 @@ class Users::UsersController < Users::BaseController
   def user_update_params
     params.require(:user).permit User::USERS_PARAMS,
                                  topic_items_attributes:
-                                   [:id, :topic_id, :_destroy]
-  end
-
-  def find_user
-    @user = User.find_by id: params[:id]
-    return if @user
-
-    flash[:danger] = t "user_not_exist"
-    redirect_to root_path
+                                   [:id, :topic_id, :_destroy],
+                                 images: []
   end
 end
