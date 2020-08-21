@@ -5,7 +5,8 @@ class PostsController < ApplicationController
 
   def index
     @post = Post.new
-    @posts = Post.post_public("public_post")
+    @posts = Post.public_post
+                 .not_by_group
                  .order_by_time.includes(:user).page(params[:page])
                  .per Settings.per_post
     respond_to do |format|

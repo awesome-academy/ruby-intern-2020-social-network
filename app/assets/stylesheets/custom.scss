@@ -205,3 +205,11 @@ input[topic="topic-item"] {
   width: 80px;
   height: 80px;
 }
+
+.request-join-card {
+  background-color: white;
+  box-shadow: 0 0 1.2rem 3px $border;
+  border-radius: .25rem;
+  margin: 10px 0;
+  padding: 10px 0;
+}

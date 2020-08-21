@@ -1,0 +1,2 @@
+$('#member_<%= @member.id - 1 %>').parent().append('<%= j render "member_groups/member", member: @member, group: @group %>');
+$('#remove_member').html('<%= j render "member_groups/member_request", group: @group, member_requests: @member_groups_waitings %>');

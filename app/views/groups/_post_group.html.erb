@@ -1,0 +1,8 @@
+<div class="gapo-page" id="my-posts">
+  <% posts.each do |post| %>
+    <%= render "posts/post", post: post %>
+  <% end %>
+</div>
+<div id="infinite-scrolling">
+  <%= paginate posts, theme: "twitter-bootstrap-3" %>
+</div>

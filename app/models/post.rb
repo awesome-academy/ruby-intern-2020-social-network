@@ -9,7 +9,8 @@ class Post < ApplicationRecord
   has_many_attached :images_post
 
   scope :order_by_time, ->{order(created_at: :DESC)}
-  scope :post_public, ->(private){where private: private}
+  scope :not_by_group, ->{where group_id: nil}
+  scope :post_group, ->(group_id){where group_id: group_id}
 
   enum private: {public_post: 0, private_post: 1}
 end

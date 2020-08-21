@@ -20,6 +20,9 @@ Rails.application.routes.draw do
       resources :likes
       resources :comments
     end
+    resources :groups do
+      resources :member_groups
+    end
     resources :topics
   end
 end

@@ -1,0 +1,17 @@
+<main class="gapo-main row">
+  <div class="col">
+    <div class="d-flex justify-content-center align-items-center w-100">
+      <div class="py-4 groups">
+        <div class="sc-eIHaNI lnlTqn  mb-3 mt-2">
+          <div class="gapo-title"><%= t "your_group" %></div>
+          <%= link_to new_group_path, class: "sc-etwtAo dJitug",
+          "data-toggle": "modal", "data-target": "#largeShoes" do %>
+            <i class="fas fa-plus"></i><span><%= t "create_group" %></span>
+          <% end %>
+          <%= render "new_group" %>
+        </div>
+        <%= render @groups %>
+      </div>
+    </div>
+  </div>
+</main>

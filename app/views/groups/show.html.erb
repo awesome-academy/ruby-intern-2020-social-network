@@ -1,0 +1,93 @@
+<main class="gapo-main row">
+  <div class="col col-360 hide_mobile pr-0">
+    <div class="aside__wrapper px-4 py-2">
+      <div class="py-4 d-flex w-100 h-100">
+        <div class="flex-column justify-content-between w-100">
+          <div class="sc-dRFtgE ecjLfm">
+            <% if @group.image_background_group.attached? %>
+              <%= image_tag @group.image_background_group, class: "sc-dvCyap gcIvwr w-100" %>
+            <% end %>
+            <div class="sc-cqpYsc bdcVAE w-100 justify-content-between align-items-center">
+              <div class="sc-hBbWxd izvcTt">
+                <div class="sc-drKuOJ hAEepG"><%= @group.name %></div>
+                <div class="sc-dyGzUR bZQirp">
+                  <div class="sc-cmjSyW bwicSQ"><%= @group.member_groups.size %>&ensp;<%= t "member" %></div>
+                  <span class="d-inline-flex mx-1">.</span>
+                  <div class="sc-cmjSyW bwicSQ"><%= @posts.size %>&ensp;<%= t "posts" %></div>
+                </div>
+              </div>
+            </div>
+            <div class="sc-fnwBNb fVhzVU w-100 justify-content-between align-items-center">
+              <div class="sc-iNhVCk igHlvs">
+                <%= link_to t("member"), group_member_groups_path(@group) %>
+              </div>
+            </div>
+          </div>
+          <% if current_user.eql? @group.user %>
+            <div class="sc-hUfwpO cSUlNI">
+              <div class="gapo-subtitle mb-3"><%= t "manage_group" %></div>
+              <div class="sc-imABML fbeITk">
+                <%= link_to group_member_groups_path @group do %>
+                  <span><%= t "request_join" %></span>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col px-2">
+    <div class="row justify-content-center bg-white">
+      <div class="col col-900-v2 pt-3">
+        <div class="sc-dxZgTM bIySQa w-100 justify-content-end align-items-start p-3">
+          <% if @group.image_background_group.attached? %>
+            <%= image_tag @group.image_background_group %>
+          <% end %>
+        </div>
+        <div class="sc-iFMziU bTeOdZ w-100 justify-content-between align-items-center">
+          <div class="sc-keVrkP iKxQoy">
+            <div class="sc-cBdUnI jlRLrg"><%= @group.name %></div>
+            <div class="sc-gVLVqr llKsKl">
+              <div class="sc-BngTV ejTYkY"><%= @group.member_groups.size %>&ensp;<%= t "member" %></div>
+              <span class="d-inline-flex mx-2">.</span>
+              <div class="sc-BngTV ejTYkY"><%= @posts.size %>&ensp;<%= t("posts") %></div>
+            </div>
+          </div>
+        </div>
+        <div class="sc-iYUSvU boqWSq w-100 justify-content-between align-items-center">
+          <div class="sc-cHSUfg bEsPfT">
+            <span><%= t "post" %></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col col-900-v2 pt-3">
+        <div class="row">
+          <div class="col col-520 py-3">
+            <% if check_member %>
+              <%= render "form_post_group", group: @group %>
+              <%= render "post_group", posts: @posts %>
+            <% end %>
+          </div>
+          <div class="col col-368 py-3">
+            <div>
+              <div class="sc-fEUNkw dgwtEY bg-white shadow rounded p-3 mb-3 border-radius-12">
+                <div class="sc-dREXXX jCsxvF mb-2 mt-1">
+                  <div class="sc-ejGVNB cXneqV gapo-title timeline__title">
+                    <div class="sc-kcbnda fdBXZX"><%= t "intro" %></div>
+                  </div>
+                </div>
+                <div class="sc-hcmgZB kSMcZu mb-2">
+                  <div class="sc-iIHSe bbNVKn"><%= @group.intro_group %></div>
+                </div>
+                <div class="sc-dHmInP cmpumL border-top py-2"><%= t "start" %> <%= @group.created_at %></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
