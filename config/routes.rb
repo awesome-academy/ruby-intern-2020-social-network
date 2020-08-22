@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     post "/signin", to: "users/sessions#create"
     delete "/logout", to: "users/sessions#destroy"
     namespace :users do
+      resources :follow_users, only: %i(create destroy)
       resources :password_resets, except: %i(index show destroy)
       resources :users do
         resources :images, only: %i(index new)
