@@ -32,6 +32,9 @@
               <li class="nav-item"><%= link_to t(".image"), users_user_images_path(@user),
                 class: "sc-hqyNC jrnEzY nav-link active font-weight-semi-bold" %></li>
             </ul>
+            <% unless @user.eql? current_user %>
+                <%= render "follow_form", user: @user %>
+              <% end %>
             <div class="d-flex align-items-center align-items-start">
               <%= link_to(edit_users_user_path, class: "btn btn-secondary setting__action border-0 d-flex justify-content-center ml-2") do %>
                 <i class="fa fa-cog"></i>

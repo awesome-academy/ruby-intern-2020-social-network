@@ -58,5 +58,7 @@ en:
   minutes: " minutes ago"
   hours: " hours ago"
   days: " days ago"
+  follow: "Follow"
+  unfollow: "Unfollow"
   sure: "Sure?"
   gapo: "GAPO"
