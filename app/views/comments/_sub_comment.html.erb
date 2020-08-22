@@ -1,0 +1,16 @@
+<div class="comment__item comment__item--parent media">
+  <%= render "comments/avatar_comment" %>
+  <div class="media-body">
+    <div class="comment__body">
+      <div class="d-inline-block comment__info undefined mb-1">
+        <%= link_to user.name, users_user_path(user), class: "comment__author font-weight-bold d-inline-block undefined" %>
+        <div><span class="text-display undefined"><%= sub_cmt.content %></span></div>
+      </div>
+      <div class="d-flex align-items-center font-size-small">
+        <div class="comment__actions">
+          <span class="text-dark">time ago</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

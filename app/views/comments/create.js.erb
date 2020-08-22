@@ -1,0 +1,7 @@
+<% if @comment.parent.present? %>
+  $('.sub_cmt_<%= @post.id %>_<%= @comment.parent_id %>').prepend('<%= j render "comments/sub_comment", sub_cmt: @comment, user: @comment.user %>');
+  $('#sub_comment_root_<%= @post.id %>_<%= @comment.parent_id %>').val('');
+<% else %>
+  $('.comments_list_<%= @comment.post.id %>').prepend('<%= j render "comments/view_comment", comment: @comment, user: @comment.user %>');
+  $('#comment_root_post_<%= @comment.post.id %>').val('');
+<% end %>

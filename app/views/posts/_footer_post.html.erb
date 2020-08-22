@@ -14,10 +14,11 @@
   <% else %>
       <%= render "posts/like", post: post %>
   <% end %>
-  <%= link_to "#", class: "post-item__action" do %>
+  <%= link_to "#", class: "post-item__action btn-comment", post_id: "#{post.id}" do %>
     <i class="fa fa-comment"></i><%= t "comment" %>
   <% end %>
   <%= link_to "#", class: "post-item__action" do %>
     <i class="fa fa-share"></i><%= t "share" %>
   <% end %>
 </div>
+<%= render "posts/comments", post: post %>

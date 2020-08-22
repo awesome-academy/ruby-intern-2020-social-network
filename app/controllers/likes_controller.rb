@@ -12,9 +12,9 @@ class LikesController < ApplicationController
   end
 
   def destroy
-    if @like.destroy
-      respond_to :js
-    end
+    return unless @like.destroy
+
+    respond_to :js
   end
 
   private

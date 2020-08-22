@@ -17,6 +17,7 @@ class Users::UsersController < Users::BaseController
                              .per Settings.per_post
     end
     respond_to do |format|
+      format.html
       format.js
     end
   end

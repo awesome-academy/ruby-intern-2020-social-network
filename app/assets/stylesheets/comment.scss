@@ -1,0 +1,82 @@
+@import 'color';
+
+.post-item__comments {
+  padding-bottom: .75rem;
+}
+
+.comment__item:last-child {
+  padding-bottom: .75rem;
+}
+
+.comment__item {
+  padding: .5rem .75rem 0;
+  position: relative;
+}
+
+.media {
+  display: flex;
+  align-items: flex-start;
+}
+
+.gapo-avatar.gapo-avatar--32 {
+  width: 2.5rem;
+}
+
+.comment__info {
+  background-color: $white_smoke;
+  padding: .5rem .625rem;
+  border-radius: 1rem;
+}
+
+.d-inline-block {
+  display: inline-block!important;
+}
+
+.text-display {
+  word-break: break-word;
+}
+
+.font-size-small {
+  font-size: .75rem;
+  padding-left: 0.625rem;
+}
+
+.comment__actions, .comment__actions>* {
+  display: flex;
+  align-items: center;
+}
+
+.text-dark {
+  color: $matter_horn;
+}
+
+.gapo-comment {
+  padding: 0 .75rem .75rem;
+}
+
+.comment__form {
+  width: 100%;
+  background: $white_smoke;
+  border: 1px solid $whisper;
+  border-radius: 1rem;
+}
+
+.pr-2, .px-2 {
+  padding-right: .5rem;
+}
+
+.comment__form textarea {
+  padding: .25rem .75rem;
+  line-height: 1.5rem;
+  height: 2rem;
+  resize: none;
+  font-size: 1.875rem;
+}
+
+select.form-control[multiple], select.form-control[size], textarea.form-control {
+  height: auto;
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
