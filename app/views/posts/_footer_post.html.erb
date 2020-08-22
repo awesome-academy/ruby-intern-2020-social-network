@@ -1,14 +1,18 @@
 <div class="post-item__stats d-flex">
-  <%= link_to "#", class: "post-item__stats__item d-flex align-items-center mr-auto text-dark" do %>
-    <i class="fa fa-thumbs-up"></i>like_count
+  <%= link_to "#", class: "post-item__stats__item d-flex align-items-center mr-auto text-dark",
+                  "data-toggle": "modal", "data-target": "#largeShoes" do %>
+    <i class="fa fa-thumbs-up"></i><span id="like_count_<%= post.id %>"><%= post.likes.size %></span>
   <% end %>
+  <%= render "posts/list_user_likes", post: post %>
   <%= link_to "#", class: "post-item__stats__item text-dark" do %>
     comment_count
   <% end %>
 </div>
 <div class="post-item__actions gapo-group">
-  <%= link_to "#", class: "post-item__action" do %>
-    <i class="fa fa-thumbs-up"></i><%= t "like" %>
+  <% if is_liked? post %>
+    <%= render "posts/dislike", post: post %>
+  <% else %>
+      <%= render "posts/like", post: post %>
   <% end %>
   <%= link_to "#", class: "post-item__action" do %>
     <i class="fa fa-comment"></i><%= t "comment" %>

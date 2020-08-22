@@ -15,7 +15,9 @@ Rails.application.routes.draw do
       end
       resources :intro_users
     end
-    resources :posts
+    resources :posts do
+      resources :likes
+    end
     resources :topics
   end
 end

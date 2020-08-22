@@ -1,0 +1,2 @@
+$('.like_<%= @post.id %>').replaceWith('<%= j render "posts/dislike", post: @post %>');
+$('#like_count_<%= @post.id %>').html('<%= @post.likes.size %>');

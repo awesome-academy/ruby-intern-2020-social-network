@@ -5,15 +5,15 @@
         <div class="text-center rounded bg-white shadow mb-4 profile__head position-relative">
           <div class="profile__head__cover rounded-top position-relative">
             <% if @user.image_background.attached? %>
-              <%= image_tag @user.image_background %>
+              <%= image_tag @user.image_background, class: "gapo-avatar-page" %>
             <% else %>
               <div></div>
             <% end %>
             <div class="profile__head__avatar rounded-circle">
               <% if @user.avatar.attached? %>
-                <%= image_tag @user.avatar %>
+                <%= image_tag @user.avatar, class: "gapo-avatar-page" %>
               <% else %>
-                <%= image_tag "man.svg", class: "gapo-avatar" %>
+                <%= image_tag "man.svg", class: "gapo-avatar-page" %>
               <% end %>
             </div>
           </div>
@@ -51,7 +51,7 @@
             </div>
           </div>
           <div class="col col-500"></div>
-            <%= render "personal_page_post", posts: @personal_posts %>
+            <%= render "personal_page_post", posts: @personal_posts, post: @post %>
         </div>
       </div>
     </div>

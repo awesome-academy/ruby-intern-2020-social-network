@@ -16,9 +16,9 @@
         <i class="fa fa-globe"></i>
       </div>
     </div>
-    <% if get_user(post).id == current_user.id %>
+    <% if get_user(post).id.eql? current_user.id %>
       <div class="destroy_post">
-        <%= link_to "&times;".html_safe, post_path(post),data: {confirm: "Sure?"}, method: :delete %>
+        <%= link_to "&times;".html_safe, post_path(post),data: {confirm: t("sure")}, method: :delete %>
       </div>
     <% end %>
   </div>

@@ -3,8 +3,10 @@ class PostsController < ApplicationController
   before_action :find_post, only: :destroy
 
   def index
+    @post = Post.new
     @posts = Post.post_public("public_post")
-                 .order_by_time.includes(:user).page(params[:page]).per 5
+                 .order_by_time.includes(:user).page(params[:page])
+                 .per Settings.per_post
     respond_to do |format|
       format.html
       format.js
