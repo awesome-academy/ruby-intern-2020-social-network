@@ -23,10 +23,11 @@ class Users::UsersController < Users::BaseController
 
   def show
     if check_current_user
-      @personal_posts = current_user.posts.order_by_time
+      @personal_posts = current_user.posts
+                                    .not_by_group.order_by_time
                                     .page(params[:page]).per Settings.per_post
     else
-      @personal_posts = @user.posts.post_public("public_post")
+      @personal_posts = @user.posts.public_post.not_by_group
                              .order_by_time.page(params[:page])
                              .per Settings.per_post
     end

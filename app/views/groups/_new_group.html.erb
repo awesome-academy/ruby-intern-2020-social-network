@@ -1,0 +1,31 @@
+<div class="modal fade" id="largeShoes" tabindex="-1" role="dialog" aria-labelledby="modalLabelLarge" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-title gapo-subtitle"><%= t "create_group" %></div>
+      </div>
+      <div class="modal-body">
+        <div class="sc-jVODtj dXWqu">
+          <%= form_for current_user.groups.build do |f| %>
+            <%= f.label :name, t("name") %>
+            <%= f.text_field :name, class: "form-control" %>
+
+            <%= f.label :avatar_group, t("avatar_group") %>
+            <%= f.file_field :avatar_group %>
+
+            <%= f.label :image_background_group, t("image_background_group") %>
+            <%= f.file_field :image_background_group %>
+
+            <%= f.label :intro_group, t("intro_group") %>
+            <%= f.text_area :intro_group, class: "form-control" %>
+
+            <%= f.submit t("save"), class: "btn btn-primary" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="d-flex align-items-center">
+  <div class="gapo-avatar gapo-avatar--64">
+    <% if member.user.avatar.attached? %>
+      <%= image_tag member.user.avatar, class: "w-100" %>
+    <% else %>
+      <%= image_tag "man.svg", class: "w-100" %>
+    <% end %>
+  </div>
+  <h5 class="font-weight-bold pl-3"><%= member.user.name %></h5>
+  <% if group.user.eql? current_user %>
+    <div class="ml-auto">
+      <%= link_to t("block"), group_member_group_path(group, member), method: :delete, remote: true, class: "btn btn-md btn-light btn-secondary border-radius-8 ml-3" %>
+    </div>
+  <% end %>
+</div>

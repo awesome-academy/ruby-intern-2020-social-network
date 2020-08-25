@@ -1,0 +1,2 @@
+$('#remove_member').html('<%= j render "member_groups/member_request", group: @group, member_requests: @member_groups_waitings %>');
+$('#member_<%= @member.id %>').remove();

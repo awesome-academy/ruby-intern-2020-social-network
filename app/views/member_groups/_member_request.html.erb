@@ -1,0 +1,27 @@
+<% if group.user.eql? current_user %>
+  <div class="row">
+    <div class="col-xs-12 mb-3">
+      <div class="sc-bIqbHp iHjchW"><%= member_requests.size %> <%= t "request_join" %></div>
+    </div>
+    <% member_requests.each do |member| %>
+      <div class="col-xs-12 request-join-card">
+        <div class="d-flex align-items-center">
+          <div class="gapo-avatar gapo-avatar--64">
+            <% if member.user.avatar.attached? %>
+              <%= image_tag member.user.avatar, class: "w-100" %>
+            <% else %>
+              <%= image_tag "man.svg", class: "w-100" %>
+            <% end %>
+          </div>
+          <h5 class="font-weight-bold pl-3"><%= member.user.name %></h5>
+          <div class="ml-auto">
+            <%= link_to t("approved"), group_member_group_path(group, member), method: :put, remote: true,
+              class: "btn btn-md btn-primary border-radius-8 w_100" %>
+            <%= link_to t("reject"), group_member_group_path(group, member), method: :delete, remote: true,
+              class: "btn btn-md btn-light btn-secondary border-radius-8 ml-3" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
