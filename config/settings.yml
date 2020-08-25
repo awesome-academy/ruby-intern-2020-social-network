@@ -14,3 +14,9 @@ minutes: 60
 hours: 3600
 per_post: 5
 per_user: 5
+minutes: 60
+hours: 3600
+per_suggests: 30
+min_text_area_post: 10
+max_text_area_post: 300
+max_text_area_comment: 150

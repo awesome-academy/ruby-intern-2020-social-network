@@ -1,0 +1,24 @@
+<div class="gapo-subtitle mb-3 mt-3"><%= t "people_you_know" %></div>
+<div class="row">
+  <% @suggest_friends.each do |suggest| %>
+    <div class="suggestion-item-background mb-2 mr-2">
+      <div>
+        <%= link_to users_user_path(suggest), class: "gapo-thumbnail gapo-thumbnail--1x1 mb-2 rounded suggest_friend" do %>
+          <% if suggest.avatar.attached? %>
+            <%= image_tag suggest.avatar %>
+          <% else %>
+            <%= image_tag "man.svg" %>
+          <% end %>
+        <% end %>
+        <%= link_to suggest.name, users_user_path(suggest), class: "suggestion-display-name text-body font-weight-semi-bold mb-2 pt-1" %>
+        <div class="button-container">
+          <% if check_user_receiver suggest %>
+            <%= link_to t("invited"), users_user_friend_request_path(suggest, find_request_to(suggest)), method: :delete, remote: true, class: "btn btn-block btn-sm btn-width-90", id: "button_suggest" %>
+          <% else %>
+            <%= link_to t("add_friend"), users_user_friend_requests_path(suggest), method: :post, remote: true, class: "btn btn-block btn-sm btn-primary btn-width-90", id: "button_suggest" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

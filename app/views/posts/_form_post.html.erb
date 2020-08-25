@@ -10,7 +10,7 @@
       <% end %>
     <% end %>
     <div class="create-post__box__input">
-      <%= f.text_area :content, placeholder: t("you_want_say_something") %>
+      <%= f.text_area :content, placeholder: t("you_want_say_something"), minlength: Settings.min_text_area_post, maxlength: Settings.max_text_area_post %>
     </div>
   </div>
   <div class="create-post__actions d-flex px-3 mt-1">
