@@ -15,6 +15,8 @@ module PostsHelper
   end
 
   def post_comments post
-    @comments = post.comments.root_comments.order(created_at: :asc).includes :sub_comments
+    @comments = post.comments.root_comments
+                    .order_by_time
+                    .includes :sub_comments
   end
 end

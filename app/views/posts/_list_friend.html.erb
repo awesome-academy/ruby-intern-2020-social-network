@@ -1,0 +1,18 @@
+<div class="aside__wrapper">
+  <div class="gapo-aside gapo-aside--right d-flex align-content-between flex-wrap">
+    <div class="w-100 py-3">
+      <div class="d-flex align-items-center">
+        <div class="gapo-subtitle px-3">
+          <%= t "contact" %>
+        </div>
+        <div class="chats__list">
+          <div>
+            <% friends.each do |friend| %>
+              <%= render "friend", friend: friend %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -20,6 +20,7 @@ en:
         password: "Password"
         password_confirmation: "Password Confirmation"
         sign_up: "Sign Up"
+        upload: "Upload image"
       show:
         time_line: "Time Line"
         introduction: "Introduction"
@@ -62,3 +63,9 @@ en:
   gapo: "GAPO"
   follow: "Follow"
   unfollow: "Unfollow"
+  invited: "Sended request"
+  accept: "Accept invite"
+  delete_invite: "Delete invite"
+  delete_friend: "Delete friend"
+  add_friend: "Add friend"
+  not_yet_logout: "You not yet logout, can't go to login !!!"

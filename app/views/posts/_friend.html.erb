@@ -1,0 +1,20 @@
+<div class="chat__item media">
+  <span>
+    <% if friend.avatar.attached? %>
+      <%= link_to users_user_path(friend),
+      class: "gapo-avatar gapo-avatar--32 mr-2" do %>
+        <%= image_tag friend.avatar, class: "avatar-comment" %>
+      <% end %>
+    <% else %>
+      <%= link_to users_user_path(friend),
+      class: "gapo-avatar gapo-avatar--32 mr-2" do %>
+        <%= image_tag "man.svg" %>
+      <% end %>
+    <% end %>
+  </span>
+  <div class="media-body d-flex">
+    <div class="chat__info">
+      <span class="chat__author"><%= friend.name %></span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,4 @@
+<div class="invited">  
+  <%= link_to t("accept"), users_user_friend_request_path(user, friend_request), method: :put, remote: true, class: "btn btn-sm btn-primary-light mr-2" %>
+  <%= link_to t("delete_invite"), users_user_friend_request_path(user, friend_request), method: :delete, remote: true, class: "btn btn-light btn-sm" %>
+</div>

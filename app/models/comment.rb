@@ -9,5 +9,6 @@ class Comment < ApplicationRecord
 
   validates :content, presence: true, allow_blank: false
 
+  scope :order_by_time, ->{order(created_at: :ASC)}
   scope :root_comments, ->{where parent_id: nil}
 end

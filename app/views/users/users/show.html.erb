@@ -36,8 +36,12 @@
               <%= render "follow_form", user: @user %>
             <% end %>
             <div class="d-flex align-items-center align-items-start">
-              <%= link_to(edit_users_user_path, class: "btn btn-secondary setting__action border-0 d-flex justify-content-center ml-2") do %>
-                <i class="fa fa-cog"></i>
+              <% if @user.eql? current_user %>
+                <%= link_to edit_users_user_path, class: "btn btn-secondary setting__action border-0 d-flex justify-content-center ml-2" do %>
+                  <i class="fa fa-cog"></i>
+                  <% end %>
+              <% else %>
+                <%= render "users/friend_requests/friend_request", user: @user %>
               <% end %>
             </div>
           </div>
