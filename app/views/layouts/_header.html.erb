@@ -5,15 +5,14 @@
     <% end %>
     <div class="bulkhead"></div>
     <div class="header_search-box" id="js-search-box">
-      <form class="header_search-form">
-        <div class="search-box_icon d-flex align-items-center align-items-center font-size-large">
-          <i class="fa fa-search"></i>
-        </div>
+      <%= form_tag users_users_path, method: :get, remote: true, class: "header_search-form" do  %>
         <div class="search-input dropdown">
-          <input class="search-box__input form-control border-0 font-size-normal shadow-none" 
-                 placeholder="Search">
+          <%= text_field_tag :name, params[:name], class: "search-box__input form-control border-0 font-size-normal shadow-none", placeholder: t("search") %>
         </div>
-      </form>
+        <div class="search-box_icon d-flex align-items-center align-items-center font-size-large">
+          <i class="fa fa-search"><%= submit_tag t("save"), class: "submit_search" %></i>
+        </div>
+      <% end %>
     </div>
     <ul class="header__nav header__nav--main d-flex align-items-center list-unstyled ml-auto hide_mobile">
       <li>

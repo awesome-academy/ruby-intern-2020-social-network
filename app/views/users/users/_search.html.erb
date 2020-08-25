@@ -1,0 +1,15 @@
+<li class="search-group__item media align-items-center">
+  <% if user.avatar.attached? %>
+    <%= link_to users_user_path(user), class: "gapo-avatar gapo-avatar--80 mr-2" do %>
+      <%= image_tag user.avatar %>
+    <% end %>
+  <% else %>
+    <%= link_to users_user_path(user), class: "gapo-avatar gapo-avatar--80 mr-2" do %>
+      <%= image_tag "man.svg" %>
+    <% end %>
+  <% end %>
+  <div class="media-body pl-1">
+    <%= link_to user.name, users_user_path(user), class: "text-body font-weight-semi-bold" %>
+  </div>
+  <%= link_to t("add_friend"), "#", class: "btn btn-sm btn-light ml-3 px-4" %>
+</li>
